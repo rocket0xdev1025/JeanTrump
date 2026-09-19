@@ -46,6 +46,10 @@
       scroll-behavior: smooth;
     }
 
+    section[id] {
+      scroll-margin-top: 96px;
+    }
+
     html, body, *, *::before, *::after, a, button, input {
       cursor: var(--flag-cursor) !important;
     }
@@ -150,13 +154,14 @@
 
     .copy-toast {
       opacity: 0;
-      transform: translateY(8px);
+      transform: translate(-50%, 8px);
       transition: all .25s ease;
+      pointer-events: none;
     }
 
     .copy-toast.show {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate(-50%, 0);
     }
 
     .logo-ring {
@@ -214,7 +219,7 @@
         <a href="https://x.com/JeanTrumpX" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter" class="w-10 h-10 rounded-full overflow-hidden border-2 border-gold bg-black hover:scale-110 transition-transform">
           <img src="x.png" alt="X" class="w-full h-full object-cover" />
         </a>
-        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex btn-buy font-poster text-lg tracking-wider px-4 py-2 rounded-md border-2 border-navy shadow-glow">
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=DgAEy7sL4FWyqguDvYA5a3YzE2VnhTeL5iEjCi79pump" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex btn-buy font-poster text-lg tracking-wider px-4 py-2 rounded-md border-2 border-navy shadow-glow">
           BUY NOW
         </a>
         <button id="menuBtn" class="md:hidden w-10 h-10 rounded-md border-2 border-gold text-gold font-poster text-2xl" aria-label="Open menu">☰</button>
@@ -247,22 +252,22 @@
         </p>
 
         <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-buy pulse-ring w-full sm:w-auto font-poster text-2xl tracking-widest px-8 py-3 rounded-md border-2 border-navy shadow-glow">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=DgAEy7sL4FWyqguDvYA5a3YzE2VnhTeL5iEjCi79pump" target="_blank" rel="noopener noreferrer" class="btn-buy pulse-ring w-full sm:w-auto font-poster text-2xl tracking-widest px-8 py-3 rounded-md border-2 border-navy shadow-glow">
             BUY NOW
           </a>
-          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="btn-chart w-full sm:w-auto font-poster text-2xl tracking-widest px-8 py-3 rounded-md border-2 border-gold text-cream">
+          <a href="https://dexscreener.com/solana/DgAEy7sL4FWyqguDvYA5a3YzE2VnhTeL5iEjCi79pump" target="_blank" rel="noopener noreferrer" class="btn-chart w-full sm:w-auto font-poster text-2xl tracking-widest px-8 py-3 rounded-md border-2 border-gold text-cream">
             CHART
           </a>
         </div>
 
         <div class="mt-8 max-w-3xl mx-auto denim-card border-2 border-gold/70 rounded-xl p-3 sm:p-4 flex flex-col sm:flex-row items-center gap-3">
           <span class="font-poster text-xl tracking-widest text-gold shrink-0">CA</span>
-          <code id="caValue" class="flex-1 text-sm sm:text-base break-all text-cream/95">TBA</code>
+          <code id="caValue" class="flex-1 text-sm sm:text-base break-all text-cream/95">DgAEy7sL4FWyqguDvYA5a3YzE2VnhTeL5iEjCi79pump</code>
           <button id="copyBtn" type="button" class="w-full sm:w-auto font-poster tracking-widest text-lg bg-gold text-deep px-5 py-2 rounded-md border-2 border-navy hover:brightness-110">
             COPY
           </button>
         </div>
-        <p id="copyToast" class="copy-toast mt-3 font-poster tracking-widest text-gold">COPIED TO CLIPBOARD ★</p>
+        <p id="copyToast" class="copy-toast fixed top-24 left-1/2 z-[60] font-poster tracking-widest text-deep bg-gold border-2 border-navy px-5 py-2 rounded-md shadow-glow">COPIED TO CLIPBOARD ★</p>
       </div>
     </section>
 
@@ -290,15 +295,15 @@
           </p>
           <div class="grid sm:grid-cols-3 gap-4 mt-8">
             <div class="bg-deep/60 border border-gold/50 rounded-xl p-4 text-center">
-              <p class="text-2xl">👖</p>
+              <p class="text-gold text-2xl leading-none">★</p>
               <p class="font-poster text-xl tracking-wider mt-1">DENIM POWERED</p>
             </div>
             <div class="bg-deep/60 border border-gold/50 rounded-xl p-4 text-center">
-              <p class="text-2xl">⚡</p>
+              <p class="text-gold text-2xl leading-none">★</p>
               <p class="font-poster text-xl tracking-wider mt-1">SOLANA SPEED</p>
             </div>
             <div class="bg-deep/60 border border-gold/50 rounded-xl p-4 text-center">
-              <p class="text-2xl">🌙</p>
+              <p class="text-gold text-2xl leading-none">★</p>
               <p class="font-poster text-xl tracking-wider mt-1">MOONBOUND</p>
             </div>
           </div>
@@ -345,7 +350,7 @@
       </div>
 
       <div class="text-center mt-10">
-        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-buy inline-flex font-poster text-2xl tracking-widest px-8 py-3 rounded-md border-2 border-navy shadow-glow">
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=DgAEy7sL4FWyqguDvYA5a3YzE2VnhTeL5iEjCi79pump" target="_blank" rel="noopener noreferrer" class="btn-buy inline-flex font-poster text-2xl tracking-widest px-8 py-3 rounded-md border-2 border-navy shadow-glow">
           BUY $JEANTRUMP NOW
         </a>
       </div>
@@ -359,17 +364,17 @@
       <div class="denim-card border-2 border-gold rounded-2xl p-2 sm:p-4 banner-frame">
         <iframe
           title="Dexscreener chart for JEANTRUMP"
-          src="https://dexscreener.com/solana/TBA?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+          src="https://dexscreener.com/solana/DgAEy7sL4FWyqguDvYA5a3YzE2VnhTeL5iEjCi79pump?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
           class="w-full h-[420px] sm:h-[560px] rounded-xl bg-deep"
         ></iframe>
       </div>
       <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="btn-chart font-poster text-xl tracking-widest px-6 py-3 rounded-md border-2 border-gold">
+        <a href="https://dexscreener.com/solana/DgAEy7sL4FWyqguDvYA5a3YzE2VnhTeL5iEjCi79pump" target="_blank" rel="noopener noreferrer" class="btn-chart font-poster text-xl tracking-widest px-6 py-3 rounded-md border-2 border-gold">
           OPEN DEXSCREENER
         </a>
         <div class="denim-card border-2 border-gold/70 rounded-xl px-4 py-3 flex items-center gap-3 max-w-full">
           <span class="font-poster text-gold tracking-widest">CA</span>
-          <code class="break-all">TBA</code>
+          <code class="break-all">DgAEy7sL4FWyqguDvYA5a3YzE2VnhTeL5iEjCi79pump</code>
           <button type="button" class="copyMini font-poster tracking-widest bg-gold text-deep px-3 py-1 rounded border border-navy">COPY</button>
         </div>
       </div>
@@ -401,7 +406,7 @@
   </footer>
 
   <script>
-    const CA = "TBA";
+    const CA = "DgAEy7sL4FWyqguDvYA5a3YzE2VnhTeL5iEjCi79pump";
     const toast = document.getElementById("copyToast");
     const menuBtn = document.getElementById("menuBtn");
     const mobileMenu = document.getElementById("mobileMenu");
